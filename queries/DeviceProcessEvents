@@ -1,0 +1,7 @@
+let VMName = "yc-vm-mde";
+let specificTime = datetime(2025-05-27T00:50:31.4253997Z);
+DeviceProcessEvents
+| where Timestamp between ((specificTime - 2m) .. (specificTime + 2m))
+| where DeviceName == VMName
+| order by Timestamp desc
+| project Timestamp, DeviceName, ActionType, FileName, ProcessCommandLine
