@@ -20,6 +20,9 @@ DeviceFileEvents
 | where FileName endswith ".zip"
 | order by Timestamp desc
 ```
+## Logs from DeviceFileEvents:
+![DeviceFileEvents](../visuals/1-device-file-events-logs.png)
+
 - Activity suggests staging of sensitive data for exfiltration.
 
 ### Process Activity
@@ -33,6 +36,9 @@ DeviceProcessEvents
 ```
 - Shows installation of 7-Zip followed by zip file creation.
 
+## Logs from DeviceProcessEvents:
+![DeviceFileEvents](../visuals/2-device-process-events-logs.png)
+
 ### Network Behavior
 - Outbound SSL connections were made to public IPs:
 ```kql
@@ -42,6 +48,9 @@ DeviceNetworkEvents
 | where Timestamp between (datetime(2025-05-27T00:48:31.4253997Z) .. datetime(2025-05-27T00:52:31.4253997Z))
 ```
 - These connections were initiated by PowerShell with `-ExecutionPolicy Bypass`, indicating an attempt to bypass restrictions and send data externally.
+## Logs from DeviceNetworkEvents:
+![DeviceFileEvents](../visuals/3-device-network-events-logs.png)
+
 
 ---
 
