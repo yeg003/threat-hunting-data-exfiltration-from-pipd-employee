@@ -1,0 +1,4 @@
+DeviceFileEvents
+| where DeviceName == "yc-vm-mde"
+| where FileName endswith ".zip"
+| order by Timestamp desc
