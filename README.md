@@ -32,7 +32,7 @@ An employee placed on a Performance Improvement Plan (PIP) is suspected of attem
 | Command & Control  | Encrypted Channel (HTTPS)      | T1071.001  |
 | Exfiltration       | Exfiltration Over C2 Channel   | T1041      |
 
-## Use This Project To Demonstrate
+## Used This Scenario To Demonstrate
 - Practical use of KQL for endpoint detection
 - Ability to correlate behavior across multiple log sources
 - End-to-end response workflow including mitigation and prevention
