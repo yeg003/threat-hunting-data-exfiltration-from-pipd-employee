@@ -1,0 +1,5 @@
+DeviceNetworkEvents
+| where DeviceName == "yc-vm-mde"
+| where RemoteIP in ("20.42.65.84", "20.42.73.26", "20.60.133.132", "20.60.181.193")
+| where Timestamp between (datetime(2025-05-27T00:48:31.4253997Z) .. datetime(2025-05-27T00:52:31.4253997Z))
+| project Timestamp, InitiatingProcessFileName, InitiatingProcessCommandLine, RemoteIP, Protocol, ActionType
